@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Oleo+Script&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@700&family=Permanent+Marker&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Satisfy&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Oleo+Script:wght@700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        /* Home section */
+        #navbars {
+            display: flex;
+            /* border: 2px solid red; */
+            flex-wrap: wrap;
+            /* width: 100vw; */
+            align-items: center;
+            width: 100vw;
+            /* justify-content: center; */
+        }
+
+        #navbars ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #navbars ul li {
+            list-style: none;
+            margin: 15px;
+        }
+
+        #navbars ul li a {
+            text-align: center;
+            margin-left: 5px;
+            margin-right: 5px;
+            /* border: 2px solid red; */
+            /* background: rgba(250, 121, 207, 0.555); */
+            color: black;
+            font-weight: bolder;
+            padding: 7px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: 'Kaushan Script', cursive;
+            transition: all 1s ease-in-out;
+        }
+
+        #navbars ul li a:hover,
+        #navbars ul li a:active {
+            background-color: black;
+            color: white;
+        }
+
+        #navbars img {
+            height: 79px;
+            width: 81px;
+            margin: 5px;
+            transition: all 1s ease-in-out;
+            cursor: pointer;
+        }
+
+        #navbars img:hover {
+            transform: scale(1.5);
+        }
+
+        #Home {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            /* border: 2px solid black; */
+            height: 600px;
+            width: 100vw;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+
+        #Homecontents {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            /* border: 2px solid green; */
+            margin: 20px;
+            padding: 2px 20px;
+            height: 350px;
+            width: 800px;
+            border-top-left-radius: 23px;
+            border-bottom-right-radius: 23px;
+            background: rgba(241, 234, 234, 0.75);
+            /* opacity: 0.8; */
+        }
+
+        #heading1 {
+            margin-bottom: 15px;
+            margin-right: 20px;
+            margin-left: 20px;
+            text-align: center;
+            font-family: 'Lobster', cursive;
+            font-size: 2.5rem;
+        }
+
+        #heading2 {
+            margin-right: 20px;
+            margin-left: 20px;
+            text-align: center;
+            font-family: 'Lobster', cursive;
+            font-size: 2.3rem;
+            color: rgb(221, 41, 41);
+        }
+
+        #Home #Homecontents p {
+            margin-top: 25px;
+            margin-bottom: 15px;
+            margin-right: 20px;
+            margin-left: 20px;
+            text-align: center;
+            font-size: 19px;
+            font-family: 'Oleo Script', cursive;
+        }
+
+        .homelinks {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 7px;
+        }
+
+        .homelinks a {
+            text-align: center;
+            margin-top: 15px;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-bottom: 7px;
+            /* border: 2px solid red; */
+            background: rgba(212, 41, 41, 0.733);
+            color: white;
+            font-weight: bolder;
+            padding: 7px;
+            width: 150px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: 'Kaushan Script', cursive;
+            transition: all 1s ease-in-out;
+        }
+
+        .homelinks a:hover,
+        .homelinks a:active {
+            background: grey;
+            color: black;
+        }
+
+        #Home ::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            background: url('https://cdn.pixabay.com/photo/2020/02/09/16/23/coronavirus-4833754_960_720.jpg') no-repeat center center/cover;
+            height: 600px;
+            width: 100vw;
+            opacity: 0.6;
+            z-index: -1;
+            animation: animone 7s ease-in-out 6s infinite;
+        }
+
+        @keyframes animone {
+            0% {
+                background: url('https://cdn.pixabay.com/photo/2020/02/09/16/23/coronavirus-4833754_960_720.jpg') no-repeat center center/cover;
+            }
+
+            25% {
+                background: url('https://cdn.pixabay.com/photo/2017/07/15/22/07/library-2507902_960_720.jpg') no-repeat center center/cover;
+            }
+
+            50% {
+                background: url('https://cdn.pixabay.com/photo/2016/11/28/21/20/happiness-1866081_960_720.jpg') no-repeat center center/cover;
+            }
+
+            75% {
+                background: url('https://cdn.pixabay.com/photo/2017/01/12/02/34/coffee-1973549_960_720.jpg') no-repeat center center/cover;
+            }
+
+            100% {
+                background: url('https://cdn.pixabay.com/photo/2015/08/28/11/37/painting-911804_960_720.jpg') no-repeat center center/cover;
+            }
+        }
+
+        #something {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            padding: 20px;
+            width: 100vw;
+            height: 400px;
+            background-color: rgba(168, 23, 47, 0.911);
+            align-items: inherit;
+        }
+
+        #something img {
+            height: 150px;
+            width: 150px;
+            margin-bottom: 10px;
+            transition: all 1s ease-in-out;
+            cursor: pointer;
+        }
+
+        #something img:hover {
+            transform: scale(2);
+        }
+
+        #something h2 {
+            margin-bottom: 10px;
+            font-size: 2.4rem;
+            color: white;
+            font-weight: bolder;
+            font-family: 'Grenze Gotisch', cursive;
+        }
+
+        #something p {
+            font-size: 18px;
+            color: white;
+            margin-bottom: 15px;
+            font-family: 'Permanent Marker', cursive;
+        }
+
+        /* About */
+        #about {
+            display: flex;
+            flex-direction: column;
+            align-items: inherit;
+            /* justify-content: center; */
+            flex-wrap: wrap;
+            width: 100vw;
+            height: 60%;
+        }
+
+        #about #aboutheading {
+            margin: 0px 0px 10px 0px;
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bolder;
+            font-family: 'Kaushan Script', cursive;
+            background-color: rgba(172, 172, 172, 0.692);
+            width: 100vw;
+        }
+
+        #about .container {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: inherit;
+            width: 100vw;
+            height: 450px;
+            /* justify-content: inherit; */
+            /* text-align: center; */
+            padding: 10px 10px 5px 10px;
+        }
+
+        #about .container h2 {
+            margin: 10px 10px;
+            font-size: 1.8rem;
+            font-weight: bolder;
+            font-family: 'Kaushan Script', cursive;
+        }
+
+        #about .container p {
+            margin: 5px 10px;
+            font-size: 18px;
+            font-family: 'Satisfy', cursive;
+        }
+
+        #about #container-2 {
+            background-color: rgba(253, 222, 154, 0.877);
+        }
+
+        #about #container-4 {
+            background-color: rgba(253, 222, 154, 0.877);
+        }
+
+        #about .container a {
+            text-align: center;
+            margin-top: 15px;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-bottom: 7px;
+            /* border: 2px solid red; */
+            background: rgba(212, 41, 41, 0.733);
+            color: white;
+            font-weight: bolder;
+            padding: 2px;
+            width: 150px;
+            border-top-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: 'Kaushan Script', cursive;
+            transition: all 1s ease-in-out;
+        }
+
+        #about .container a:hover,
+        #about .container a:active {
+            background-color: blueviolet;
+            color: black;
+        }
+
+        #about .container img {
+            height: 200px;
+            width: 350px;
+            margin: 15px auto;
+            border-top-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            transition: all 1s ease-in-out;
+            cursor: pointer;
+        }
+
+        #about .container img:hover {
+            transform: scale(1.4);
+        }
+
+        /* Blogs */
+        #blogs {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            /* padding: 10px; */
+            width: 100vw;
+            /* background-color: rgb(188, 253, 247); */
+        }
+
+        #blogs h1 {
+            text-align: center;
+            margin: 10px 0px;
+            font-size: 2.5rem;
+            font-weight: bolder;
+            font-family: 'Oleo Script', cursive;
+        }
+
+        #blogs .blogclass {
+            display: flex;
+            flex-direction: column;
+            align-items: inherit;
+            flex-wrap: wrap;
+            height: 400px;
+            width: 90vw;
+            background-color: lightblue;
+            margin-bottom: 17px;
+            border-top-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            cursor: pointer;
+            transition: all 1s ease-in-out;
+        }
+
+        #blogs .blogclass:hover {
+            transform: scale(1.1);
+        }
+
+        #blogs .blogclass h2 {
+            margin: 15px;
+            text-align: center;
+            font-size: 2.4rem;
+            font-weight: bolder;
+            color: white;
+            font-family: 'Oleo Script', cursive;
+        }
+
+        #blogs .blogclass p {
+            margin: 5px 30px;
+            text-align: center;
+            color: white;
+            font-size: 22px;
+            font-weight: bolder;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        #blogs .blogclass a {
+            text-align: center;
+            margin-top: 100px;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-bottom: 0px;
+            /* border: 2px solid red; */
+            background: rgba(212, 41, 41, 0.733);
+            color: white;
+            font-weight: bolder;
+            padding: 7px;
+            width: 150px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: 'Kaushan Script', cursive;
+            transition: all 1s ease-in-out;
+        }
+
+        #blogs .blogclass a:hover,
+        #blogs .blogclass a:active {
+            background-color: rgba(67, 67, 247, 0.747);
+            color: black;
+        }
+
+        #blogs #blog-1 {
+            background: url('https://cdn.pixabay.com/photo/2015/05/15/14/48/fireworks-768706_960_720.jpg') no-repeat center center/cover;
+        }
+
+        #blogs #blog-2 {
+            background: url('https://cdn.pixabay.com/photo/2018/09/18/11/20/autumn-3685929_960_720.jpg') no-repeat center center/cover;
+        }
+
+        #blogs #blog-3 {
+            background: url('https://cdn.pixabay.com/photo/2018/02/07/18/30/people-3137670__340.jpg') no-repeat center center/cover;
+        }
+
+        #blogs #blog-4 {
+            background: url('https://cdn.pixabay.com/photo/2019/05/01/10/14/research-4170441_960_720.jpg') no-repeat center center/cover;
+        }
+
+        #blogs #blog-5 {
+            background: url('https://cdn.pixabay.com/photo/2018/04/01/14/10/table-3281047_960_720.jpg') no-repeat center center/cover;
+        }
+
+        #blogs #blog-6 {
+            background: url('https://cdn.pixabay.com/photo/2017/02/26/11/57/mountaineer-2100050_960_720.jpg') no-repeat center center/cover;
+        }
+
+        #blogs #blog-7 {
+            background: url('https://cdn.pixabay.com/photo/2017/05/07/19/32/strawberry-2293337_960_720.jpg') no-repeat center center/cover;
+        }
+
+        #blogs #blog-8 {
+            background: url('https://cdn.pixabay.com/photo/2017/06/05/11/01/airport-2373727_960_720.jpg') no-repeat center center/cover;
+        }
+
+        /* Bloggers  */
+        #bloggers {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            /* justify-content: center; */
+            width: 100vw;
+            background: rgb(1, 27, 83);
+            /* height: 100vh; */
+        }
+
+        #bloggers h1 {
+            margin: 10px 0px;
+            color: white;
+            text-align: center;
+            font-size: 2.4rem;
+            font-family: 'Lobster', cursive;
+        }
+
+        #bloggers div {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            padding: 10px;
+        }
+
+        #bloggers div img {
+            width: 150px;
+            height: 100px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+
+        #bloggers div p {
+            margin-bottom: 5px;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 22px;
+            font-family: 'Berkshire Swash', cursive;
+        }
+
+        /* Footer  */
+        footer {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            background: rgba(24, 23, 23, 0.911);
+            color: white;
+            font-size: 17px;
+            font-family: 'Satisfy', cursive;
+            font-weight: 550;
+
+        }
+
+        footer #first {
+            display: flex;
+            align-items: inherit;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 10px 20px;
+        }
+
+        footer #second {
+            display: flex;
+            align-items: inherit;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 10px 20px;
+        }
+
+        footer #second img {
+            height: 80px;
+            width: 80px;
+        }
+
+        footer #third {
+            display: flex;
+            align-items: inherit;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin: 10px 20px;
+        }
+
+        footer #third p,
+        footer #third span {
+            margin-bottom: 15px;
+        }
+
+        footer #fourth {
+            margin: 10px 20px;
+        }
+
+        /* Responsive design  */
+        @media only screen and (max-width: 865px) {
+            hr {
+                display: none;
+            }
+
+            #something {
+                height: auto;
+                padding: 5px;
+            }
+
+            #something img {
+                height: 114px;
+                width: 130px;
+                margin-bottom: 5px;
+            }
+
+            #something h2 {
+                margin-bottom: 7px;
+                font-size: 26px;
+            }
+
+            #something p {
+                font-size: 13px;
+                margin-bottom: 5px;
+            }
+
+            #navbars {
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            #navbars img {
+                height: 72px;
+                width: 75px;
+                margin: 0px;
+            }
+
+            #navbars ul li {
+                margin: 0px 5px;
+            }
+
+            #navbars ul li a {
+                padding: 0;
+                font-size: 15px;
+            }
+
+            #heading1 {
+                margin-bottom: 0px;
+                margin-right: 0px;
+                margin-left: 0px;
+                font-size: 26px;
+            }
+
+            #heading2 {
+                margin-right: 0px;
+                margin-left: 0px;
+                font-size: 26px;
+            }
+
+            #Home #Homecontents p {
+                margin-top: 9px;
+                margin-bottom: 9px;
+                margin-right: 0px;
+                margin-left: 0px;
+                font-size: 14px;
+            }
+
+            .homelinks {
+                flex-direction: column;
+            }
+
+            .homelinks a {
+                margin-top: 5px;
+                margin-left: 5px;
+                margin-right: 5px;
+                margin-bottom: 5px;
+                padding: 5px;
+                width: 100px;
+                height: auto;
+                font-size: 11px;
+            }
+
+            #Homecontents {
+                margin: 5px;
+                padding: 2px 5px;
+                height: auto;
+                width: 460px;
+            }
+
+            #Home {
+                height: 460px;
+            }
+
+            #Home ::before {
+                height: 460px;
+            }
+
+            #about #aboutheading {
+                margin: 0;
+                font-size: 24px;
+            }
+
+            #about .container h2 {
+                margin: 0px 3px;
+                font-size: 18px;
+            }
+
+            #about .container p {
+                margin: 3px 3px;
+                font-size: 14px;
+            }
+
+            #about .container a {
+                margin-top: 4px;
+                margin-left: 3px;
+                margin-right: 3px;
+                margin-bottom: 2px;
+                width: 100px;
+                font-size: 12px;
+            }
+
+            #about .container img {
+                height: 120px;
+                width: 205px;
+                margin: 7px auto;
+            }
+
+            #about .container {
+                height: auto;
+                padding: 5px;
+            }
+
+            #blogs h1 {
+                margin: 4px 0px;
+                font-size: 26px;
+            }
+
+            #blogs .blogclass h2 {
+                margin: 3px;
+                font-size: 22px;
+            }
+
+            #blogs .blogclass p {
+                margin: 2px 3px;
+                font-size: 13px;
+            }
+
+            #blogs .blogclass a {
+                margin-top: 40px;
+                margin-left: 5px;
+                margin-right: 5px;
+                margin-bottom: 6px;
+                padding: 5px;
+                width: 100px;
+                font-size: 11px;
+            }
+
+            #blogs .blogclass {
+                height: auto;
+                margin-bottom: 10px;
+            }
+
+            #bloggers h1 {
+                margin: 5px 0px;
+                font-size: 26px;
+            }
+
+            #bloggers div img {
+                width: 100px;
+                height: 71px;
+                margin-bottom: 2px;
+            }
+
+            #bloggers div p {
+                margin-bottom: 2px;
+                padding: 3px;
+                font-size: 11px;
+            }
+
+            #bloggers div {
+                padding: 5px;
+            }
+
+            footer #first {
+                margin: 4px 7px;
+            }
+
+            footer {
+                font-size: 11px;
+            }
+
+            footer #second {
+                margin: 5px 7px;
+            }
+
+            footer #second img {
+                height: 70px;
+                width: 70px;
+            }
+
+            footer #third {
+                margin: 5px 7px;
+            }
+
+            footer #third p,
+            footer #third span {
+                margin-bottom: 8px;
+            }
+
+            footer #fourth {
+                margin: 5px 5px;
+            }
+        }
+
+        @media only screen and (max-width: 212px) {
+            #about .container img {
+                height: 70px;
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbars">
+        <img src="logo.png" alt="">
+        <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#about">About Our Site</a></li>
+            <li><a href="#blogs">Blogs</a></li>
+            <li><a href="#bloggers">About Our Bloggers</a></li>
+            <li><a href="#first">Guidlines</a></li>
+        </ul>
+    </nav>
+    <div id="Home">
+        <div id="Homecontents">
+            <h1 id="heading1">This is heading</h1>
+            <h1 id="heading2">This is another heading</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque minima nostrum explicabo suscipit eveniet
+                tempore qui inventore eius sit asperiores!</p>
+            <div class="homelinks">
+                <a href="#">Link-1</a>
+                <a href="#">Link-2</a>
+            </div>
+        </div>
+    </div>
+    <div id="something">
+        <img src="https://cdn.pixabay.com/photo/2019/08/28/17/04/note-4437201_960_720.png" alt="">
+        <hr width="500px">
+        <h2>This is also a heading</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sunt fugit eum earum a enim maxime mollitia
+            eligendi, et quis quia excepturi natus asperiores illum modi tempore nemo non minima id necessitatibus porro
+            rem illo ipsam nisi! Deserunt commodi maxime sit dolorem praesentium ex laudantium esse molestias,
+            temporibus autem voluptas?</p>
+        <hr width="700px">
+
+    </div>
+    <div id="about">
+        <h1 id="aboutheading">About our site</h1>
+        <div class="container" id="container-1">
+            <hr width="200px" color="red">
+            <h2>Heading of Container-1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime eum velit alias architecto quod
+                perspiciatis. Officiis quos repellat numquam voluptatum sequi consequuntur pariatur. Aliquid odio animi
+                delectus dicta mollitia reprehenderit!</p>
+            <a href="#">Anc-1</a>
+            <img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_960_720.jpg" alt="">
+            <hr width="700px" color="red">
+        </div>
+        <div class="container" id="container-2">
+            <hr width="200px" color="red">
+            <h2>Heading of Container-2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime eum velit alias architecto quod
+                perspiciatis. Officiis quos repellat numquam voluptatum sequi consequuntur pariatur. Aliquid odio animi
+                delectus dicta mollitia reprehenderit!</p>
+            <a href="#">Anc-2</a>
+            <img src="https://cdn.pixabay.com/photo/2015/11/07/11/03/satellite-1030779_960_720.jpg" alt="">
+            <hr width="700px" color="red">
+        </div>
+        <div class="container" id="container-3">
+            <hr width="200px" color="red">
+            <h2>Heading of Container-3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime eum velit alias architecto quod
+                perspiciatis. Officiis quos repellat numquam voluptatum sequi consequuntur pariatur. Aliquid odio animi
+                delectus dicta mollitia reprehenderit!</p>
+            <a href="#">Anc-3</a>
+            <img src="https://cdn.pixabay.com/photo/2016/03/04/19/36/beach-1236581_960_720.jpg" alt="">
+            <hr width="700px" color="red">
+        </div>
+        <div class="container" id="container-4">
+            <hr width="200px" color="red">
+            <h2>Heading of Container-4</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime eum velit alias architecto quod
+                perspiciatis. Officiis quos repellat numquam voluptatum sequi consequuntur pariatur. Aliquid odio animi
+                delectus dicta mollitia reprehenderit!</p>
+            <a href="#">Anc-4</a>
+            <img src="https://cdn.pixabay.com/photo/2014/09/07/21/50/library-438389_960_720.jpg" alt="">
+            <hr width="700px" color="red">
+        </div>
+    </div>
+    <div id="blogs">
+        <h1>Explore our Blogs here</h1>
+        <div id="blog-1" class="blogclass">
+            <h2>Blogs about current affairs</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam non repudiandae eligendi modi rerum
+                inventore quidem magnam quia temporibus, ipsam sit quis cum doloremque quo iusto minus libero dolorum.
+                Id voluptates itaque cupiditate, officia quos ut? Omnis, corrupti exercitationem ad unde repellat
+                aliquid esse ut!</p>
+            <a href="#">Explore Here</a>
+        </div>
+        <div id="blog-2" class="blogclass">
+            <h2>Motivational Blogs</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam non repudiandae eligendi modi rerum
+                inventore quidem magnam quia temporibus, ipsam sit quis cum doloremque quo iusto minus libero dolorum.
+                Id voluptates itaque cupiditate, officia quos ut? Omnis, corrupti exercitationem ad unde repellat
+                aliquid esse ut!</p>
+            <a href="#">Explore Here</a>
+        </div>
+        <div id="blog-3" class="blogclass">
+            <h2>Educational Blogs</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam non repudiandae eligendi modi rerum
+                inventore quidem magnam quia temporibus, ipsam sit quis cum doloremque quo iusto minus libero dolorum.
+                Id voluptates itaque cupiditate, officia quos ut? Omnis, corrupti exercitationem ad unde repellat
+                aliquid esse ut!</p>
+            <a href="#">Explore Here</a>
+        </div>
+        <div id="blog-4" class="blogclass">
+            <h2>Technical Blogs</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam non repudiandae eligendi modi rerum
+                inventore quidem magnam quia temporibus, ipsam sit quis cum doloremque quo iusto minus libero dolorum.
+                Id voluptates itaque cupiditate, officia quos ut? Omnis, corrupti exercitationem ad unde repellat
+                aliquid esse ut!</p>
+            <a href="#">Explore Here</a>
+        </div>
+        <div id="blog-5" class="blogclass">
+            <h2>Art and Work Blogs</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam non repudiandae eligendi modi rerum
+                inventore quidem magnam quia temporibus, ipsam sit quis cum doloremque quo iusto minus libero dolorum.
+                Id voluptates itaque cupiditate, officia quos ut? Omnis, corrupti exercitationem ad unde repellat
+                aliquid esse ut!</p>
+            <a href="#">Explore Here</a>
+        </div>
+        <div id="blog-6" class="blogclass">
+            <h2>Sports related blogs</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam non repudiandae eligendi modi rerum
+                inventore quidem magnam quia temporibus, ipsam sit quis cum doloremque quo iusto minus libero dolorum.
+                Id voluptates itaque cupiditate, officia quos ut? Omnis, corrupti exercitationem ad unde repellat
+                aliquid esse ut!</p>
+            <a href="#">Explore Here</a>
+        </div>
+        <div id="blog-7" class="blogclass">
+            <h2>Food Blogs</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam non repudiandae eligendi modi rerum
+                inventore quidem magnam quia temporibus, ipsam sit quis cum doloremque quo iusto minus libero dolorum.
+                Id voluptates itaque cupiditate, officia quos ut? Omnis, corrupti exercitationem ad unde repellat
+                aliquid esse ut!</p>
+            <a href="#">Explore Here</a>
+        </div>
+        <div id="blog-8" class="blogclass">
+            <h2>Travel Blogs</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam non repudiandae eligendi modi rerum
+                inventore quidem magnam quia temporibus, ipsam sit quis cum doloremque quo iusto minus libero dolorum.
+                Id voluptates itaque cupiditate, officia quos ut? Omnis, corrupti exercitationem ad unde repellat
+                aliquid esse ut!</p>
+            <a href="#">Explore Here</a>
+        </div>
+    </div>
+    <div id="bloggers">
+        <h1>Our Bloggers</h1>
+        <div>
+            <a href="#"><img
+                    src="https://th.thgim.com/migration_catalog/article11770477.ece/alternates/FREE_435/Satyendra-Nath-Bose"
+                    alt=""></a>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id laborum est laudantium totam dolore aut
+                reprehenderit quae suscipit itaque quia illum voluptatum minima provident a corporis unde debitis
+                facilis tempora ullam consequuntur, rem placeat optio? Voluptates dolorum voluptatum aspernatur corrupti
+                illum incidunt pariatur. Quibusdam labore accusamus, asperiores pariatur aliquid quos!"</p>
+            <p>-By Hello World</p>
+            <hr width="700px">
+        </div>
+        <div>
+            <a href="#"><img
+                    src="https://www.biography.com/.image/t_share/MTE5NDg0MDU0OTU2OTAxOTAz/albert-einstein-9285408-1-402.jpg"
+                    alt=""></a>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id laborum est laudantium totam dolore aut
+                reprehenderit quae suscipit itaque quia illum voluptatum minima provident a corporis unde debitis
+                facilis tempora ullam consequuntur, rem placeat optio? Voluptates dolorum voluptatum aspernatur corrupti
+                illum incidunt pariatur. Quibusdam labore accusamus, asperiores pariatur aliquid quos!"</p>
+            <p>-By Hello World</p>
+            <hr width="700px">
+        </div>
+        <div>
+            <a href="#"><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Young_P.C._Ray.jpg/220px-Young_P.C._Ray.jpg"
+                    alt=""></a>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id laborum est laudantium totam dolore aut
+                reprehenderit quae suscipit itaque quia illum voluptatum minima provident a corporis unde debitis
+                facilis tempora ullam consequuntur, rem placeat optio? Voluptates dolorum voluptatum aspernatur corrupti
+                illum incidunt pariatur. Quibusdam labore accusamus, asperiores pariatur aliquid quos!"</p>
+            <p>-By Hello World</p>
+            <hr width="700px">
+        </div>
+        <div>
+            <a href="#"><img src="https://www.indiaeducation.net/imagesvr_ce/9590/jagadishchandrabose.jpg" alt=""></a>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id laborum est laudantium totam dolore aut
+                reprehenderit quae suscipit itaque quia illum voluptatum minima provident a corporis unde debitis
+                facilis tempora ullam consequuntur, rem placeat optio? Voluptates dolorum voluptatum aspernatur corrupti
+                illum incidunt pariatur. Quibusdam labore accusamus, asperiores pariatur aliquid quos!"</p>
+            <p>-By Hello World</p>
+            <hr width="700px">
+        </div>
+    </div>
+    <footer>
+        <hr width="700px">
+        <div id="first">
+            <p> Lorem, ipsum dolor: </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing |</p>
+            <p>Lorem ipsum dolor sit amet|</p>
+        </div>
+        <hr width="700px">
+        <div id="second">
+            <img src="logo.png" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, aspernatur|</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, aut ||</p>
+        </div>
+        <hr width="700px">
+        <div id="third">
+            <span>About: </span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum aut aliquid possimus. Nostrum esse
+                voluptas minus veniam debitis sapiente incidunt repellendus optio molestias architecto quam aperiam
+                commodi sunt iusto voluptatem quod ut beatae, ullam accusantium. Alias, dolores illum. Eius perferendis
+                nostrum veniam, asperiores repellat enim dolor officiis quod unde saepe! Facilis itaque minus, dolore
+                assumenda officiis aspernatur facere quos accusantium commodi dignissimos sint molestiae! Deleniti earum
+                tempora sed alias esse, illum dolore doloribus inventore. Veniam, odio ipsam incidunt repudiandae quas
+                corrupti voluptates, cum, assumenda explicabo voluptatibus dolores minus omnis. Ex maiores voluptatibus
+                nisi modi eveniet culpa soluta natus vel eligendi?</p>
+        </div>
+        <hr width="700px">
+        <div id="fourth">
+            <p>Copyrights &copy; | 2020</p>
+        </div>
+        <hr width="700px">
+    </footer>
+</body>
+
+</html>
